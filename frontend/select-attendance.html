@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Attendance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<nav class="navbar">
+  <h2>Attendance Setup</h2>
+</nav>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Attendance Details</h1>
+
+    <select id="subject" class="nav-btn">
+      <option>Maths</option>
+      <option>Physics</option>
+      <option>Computer Science</option>
+    </select><br><br>
+
+    <input type="date" id="date" class="nav-btn"><br><br>
+
+    <input type="number" id="classes" placeholder="No of Classes" class="nav-btn"><br><br>
+
+    <button class="btn-primary" onclick="startAttendance()">Proceed</button>
+  </div>
+</section>
+
+<script src="js/api.js"></script>
+</body>
+</html>

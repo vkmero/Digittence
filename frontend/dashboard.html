@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Digittence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<nav class="navbar">
+    <h2>Dashboard</h2>
+    <a onclick="logout()" class="nav-btn">Logout</a>
+</nav>
+
+<section class="features">
+    <h2>Welcome to Digittence</h2>
+
+    <div class="feature-cards">
+        <div class="card">
+            <h3>Total Students</h3>
+            <p id="students">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Classes</h3>
+            <p id="classes">--</p>
+        </div>
+    </div>
+</section>
+
+<script src="js/api.js"></script>
+</body>
+</html>
