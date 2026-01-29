@@ -9,8 +9,7 @@
 }
 
 body {
-    background: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f")
-        no-repeat center / cover;
+    background: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") no-repeat center / cover;
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
@@ -40,28 +39,15 @@ body {
     font-weight: 600;
 }
 
-/* ===============================
-   COMMON BUTTON / INPUT STYLE
-================================ */
-.nav-btn,
-input,
-select {
-    padding: 12px 26px;
+.nav-buttons .nav-btn {
+    padding: 10px 22px;
+    margin-left: 10px;
     border-radius: 25px;
     border: none;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
-    outline: none;
+    cursor: pointer;
     backdrop-filter: blur(10px);
-    font-size: 14px;
-}
-
-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-select option {
-    color: #000;
 }
 
 /* ===============================
@@ -77,6 +63,7 @@ select option {
 
 .hero-content {
     flex: 1;
+    min-width: 0; /* important for flex wrapping */
     animation: fadeUp 1.2s ease;
 }
 
@@ -92,10 +79,13 @@ select option {
 }
 
 .hero-content p {
-    max-width: 520px;
-    opacity: 0.9;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 25px;
     line-height: 1.6;
+    white-space: normal;
+    overflow: visible;
+    word-wrap: break-word;
 }
 
 /* ===============================
@@ -172,45 +162,16 @@ select option {
 }
 
 /* ===============================
-   ATTENDANCE PAGE
-================================ */
-#roll {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-/* ===============================
-   TOUCH OPTIMIZATION
-================================ */
-button,
-a,
-input,
-select {
-    touch-action: manipulation;
-}
-
-/* ===============================
    ANIMATIONS
 ================================ */
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 /* ===============================
@@ -221,54 +182,32 @@ select {
         flex-direction: column;
         text-align: center;
     }
-
-    .hero-image img {
-        width: 300px;
-    }
+    .hero-image img { width: 300px; }
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        padding: 18px 25px;
-    }
+    .navbar { padding: 18px 25px; }
 
     .hero-section {
         padding: 30px 20px;
         gap: 25px;
     }
 
-    .hero-content h1 {
-        font-size: 34px;
-    }
-
-    .hero-content h2 {
-        font-size: 18px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
+    .hero-content h1 { font-size: 34px; }
+    .hero-content h2 { font-size: 18px; }
+    .hero-content p { font-size: 14px; }
 
     .btn-primary,
     .btn-secondary,
-    .nav-btn,
-    input,
-    select {
+    .nav-btn {
         padding: 14px 28px;
         font-size: 15px;
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .hero-image img {
-        width: 260px;
-    }
+    .hero-image img { width: 260px; }
 
-    .card {
-        padding: 20px;
-    }
-
-    #roll {
-        font-size: 30px;
-    }
+    .card { padding: 20px; }
 }
+
